@@ -1,6 +1,7 @@
 from menu import Menu
 from registra_utente import dati_utente
 from registra_libro import dati_libro
+from funzionalita import Funzionalita
 
 def main():
     numero_tessera = 1
@@ -20,6 +21,11 @@ def main():
                 libro = dati_libro()
                 libri.append(libro)
                 print(libri)
+            
+            case "3":
+                risultati = Funzionalita.cerca_libro(libri)
+                print("Sono stati trovati i seguenti libri: ")
+                print(risultati)
             case _:
                 continue
 
